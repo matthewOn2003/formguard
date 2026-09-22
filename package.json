@@ -1,5 +1,5 @@
 {
-  "name": "formguard",
+  "name": "@matthew2003/formguard",
   "version": "0.1.0",
   "description": "Reusable React form controls and validation library",
   "main": "dist/index.js",
