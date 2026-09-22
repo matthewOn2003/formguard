@@ -1,0 +1,118 @@
+.fg-form {
+  --fg-radius: 4px;
+  --fg-field-gap: 18px;
+  --fg-control-height: 46px;
+  --fg-border-color: #d8dee8;
+  --fg-focus-color: #5268e8;
+  --fg-text-color: #202344;
+  --fg-muted-color: #747994;
+  --fg-label-color: #202344;
+  --fg-error-color: #c33f4e;
+  --fg-input-background: #ffffff;
+  --fg-button-background: #5268e8;
+  --fg-button-color: #ffffff;
+  display: grid;
+  gap: var(--fg-field-gap);
+  color: var(--fg-text-color);
+}
+
+.fg-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.fg-label {
+  color: var(--fg-label-color);
+  font: 700 0.78rem/1.35 Roboto, sans-serif;
+}
+
+.fg-control {
+  width: 100%;
+  min-height: var(--fg-control-height);
+  border: 1px solid var(--fg-border-color);
+  border-radius: var(--fg-radius);
+  padding: 0 13px;
+  color: var(--fg-text-color);
+  background: var(--fg-input-background);
+  font: 0.92rem/1.4 Roboto, sans-serif;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.fg-control::placeholder {
+  color: var(--fg-muted-color);
+}
+
+.fg-control:focus {
+  border-color: var(--fg-focus-color);
+  /* box-shadow: 0 0 0 3px color-mix(in srgb, var(--fg-focus-color) 15%, transparent); */
+}
+
+.fg-control-error {
+  border-color: var(--fg-error-color);
+}
+
+.fg-hint,
+.fg-error,
+.fg-form-error {
+  margin: 0;
+  font: 0.74rem/1.4 Roboto, sans-serif;
+}
+
+.fg-hint {
+  color: var(--fg-muted-color);
+}
+
+.fg-error,
+.fg-form-error {
+  color: var(--fg-error-color);
+}
+
+.fg-radio-field {
+  border: 0;
+  padding: 0;
+}
+
+.fg-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.fg-radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg-muted-color);
+  font: 0.88rem/1.4 Roboto, sans-serif;
+  cursor: pointer;
+}
+
+.fg-radio-option input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--fg-focus-color);
+}
+
+.fg-button {
+  min-height: var(--fg-control-height);
+  border: 0;
+  border-radius: var(--fg-radius);
+  padding: 0 18px;
+  color: var(--fg-button-color);
+  background: var(--fg-button-background);
+  font: 700 0.9rem/1 Roboto, sans-serif;
+  cursor: pointer;
+  transition: filter 160ms ease, opacity 160ms ease;
+}
+
+.fg-button:hover:not(:disabled) {
+  filter: brightness(0.93);
+}
+
+.fg-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
