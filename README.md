@@ -2,11 +2,17 @@
 
 FormGuard is a reusable React form control and validation package.
 
+## Installation
+
+```bash
+npm install formguard
+```
+
 ## Example
 
 ```tsx
-import { FormButton, FormGuard, FormInput, rules } from "@neighbor-link/formguard";
-import "@neighbor-link/formguard/styles.css";
+import { FormButton, FormGuard, FormInput, rules } from "formguard";
+import "formguard/styles.css";
 
 <FormGuard
   initialValues={{ website: "" }}
